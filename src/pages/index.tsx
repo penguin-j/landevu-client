@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -17,10 +18,10 @@ export default function Home() {
         <p className={styles.description}>Landevu is ...</p>
 
         <div className={styles.grid}>
-          <a href='https://nextjs.org/docs' className={styles.card}>
+          <Link href='/areas/area130001' className={styles.card}>
             <h2>Search &rarr;</h2>
             <p>Find your rendez-vous spot.</p>
-          </a>
+          </Link>
         </div>
       </main>
 
