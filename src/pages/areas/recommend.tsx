@@ -1,13 +1,16 @@
 import { useState } from 'react'
 
 const RecommendArea = () => {
+  const [data, setData] = useState('')
+
   const RecommendAreaForm = () => {
     const [name, setName] = useState('')
     const handleNameChange = (event) => {
       setName(event.target.value)
     }
+
     const handleSubmit = () => {
-      // todo
+      setData('Hello from ' + name)
     }
 
     return (
@@ -18,10 +21,19 @@ const RecommendArea = () => {
     )
   }
 
+  if (!data) {
+    return (
+      <>
+        <h1>Recommendation</h1>
+        <RecommendAreaForm />
+      </>
+    )
+  }
+
   return (
     <>
       <h1>Recommendation</h1>
-      <RecommendAreaForm />
+      <>{data}</>
     </>
   )
 }
