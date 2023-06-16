@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function RecommendArea() {
+const RecommendArea = () => {
   const RecommendAreaForm = () => {
     const [name, setName] = useState('')
     const handleNameChange = (event) => {
@@ -25,3 +25,5 @@ export default function RecommendArea() {
     </>
   )
 }
+
+export default RecommendArea
